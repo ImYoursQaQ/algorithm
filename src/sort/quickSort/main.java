@@ -1,7 +1,7 @@
 package sort.quickSort;
 
 /*
- * 冒泡排序
+ * 快速排序
  *
  * */
 public class main {
