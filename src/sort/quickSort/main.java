@@ -1,5 +1,7 @@
 package sort.quickSort;
 
+import java.util.Arrays;
+
 /*
  * 快速排序
  *
@@ -8,7 +10,8 @@ public class main {
     public static void main(String[] args) {
         int[] a = {7, 8, 6, 4, 9, 5, 2, 3, 1};
         int start = 0,end = a.length-1;
-        quickSort(a,start,end);
+        Arrays.sort(a);//Arrays工具类内置排序
+        //quickSort(a,start,end);
         printresult(a);
 
     }
