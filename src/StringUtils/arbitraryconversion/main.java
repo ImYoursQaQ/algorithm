@@ -20,7 +20,7 @@ public class main {
         for (int i = 10; i <=36; i++) {
             chs[i] = (char) ('A' + (i-10));
         }
-        int num = Integer.parseInt(a,frombase);
+        int num = Integer.parseInt(a,frombase);//利用此工具转换为10进制数
         //System.out.println(num);
         StringBuilder sb = new StringBuilder();
         while (num!=0){
