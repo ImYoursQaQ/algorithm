@@ -6,6 +6,9 @@ import java.lang.reflect.Proxy;
 
 /**
  * 动态代理实例程序
+ * 实现了InvocationHandler接口
+ * 在被激活时调用invoke()方法
+ * 相当于对原来的实现类做了增强
  *
  */
 public class MyDynamicProxy {
@@ -15,16 +18,23 @@ public class MyDynamicProxy {
         // 构造代码实例
         Hello proxyHello = (Hello) Proxy.newProxyInstance(HelloImpl.class.getClassLoader(), HelloImpl.class.getInterfaces(), handler);
         // 调用代理方法
-        proxyHello.sayHello();
+        //proxyHello.sayHello();
+        proxyHello.sayHi();
     }
 }
 interface Hello {
     void sayHello();
+    void sayHi();
 }
 class HelloImpl implements  Hello {
     @Override
     public void sayHello() {
         System.out.println("Hello World");
+    }
+
+    @Override
+    public void sayHi() {
+        System.out.println("do nothing");
     }
 }
  class MyInvocationHandler implements InvocationHandler {
