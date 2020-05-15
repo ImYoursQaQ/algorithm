@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * 动态代理实例程序
+ * 动态代理实例程序:JDK Proxy
  * 实现了InvocationHandler接口
  * 在被激活时调用invoke()方法
  * 相当于对原来的实现类做了增强
