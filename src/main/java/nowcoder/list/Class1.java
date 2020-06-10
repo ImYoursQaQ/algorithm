@@ -30,10 +30,10 @@ public class Class1 {
     }
 
     public static ArrayList<Integer> printListFromTailToHead(ListNode listNode) {
-        if (listNode == null){
-            return new ArrayList<>();
-        }
         ArrayList list = new ArrayList();
+        if (listNode == null){
+            return list;
+        }
         Deque vector = new ArrayDeque() ;
         while (listNode.next!=null){
             vector.addFirst(listNode.val);
