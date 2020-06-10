@@ -43,14 +43,14 @@ public class Class2 {
     public static boolean Find(int target, int[][] array) {
 
 
-        Set myset = new HashSet();
+        Set mySet = new HashSet();
         for (int[] is : array) {
             for (int i : is) {
                 // System.out.print(i + ",");
-                myset.add(i);
+                mySet.add(i);
             }
         }
-        boolean add = myset.add(target);
+        boolean add = mySet.add(target);
         return !add;
     }
 
