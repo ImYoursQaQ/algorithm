@@ -36,6 +36,15 @@ class Solution {
 
     }
 
+    public void quickSort(int[] nums,int p,int r){
+        if (p<r){
+            int partition = partition(nums, p, r);
+            quickSort(nums,p,partition-1);
+            quickSort(nums,partition+1,r);
+        }
+
+    }
+
     public static int partition(int[] num,int p, int r){
         int pivot = num[r];
         int i = p;

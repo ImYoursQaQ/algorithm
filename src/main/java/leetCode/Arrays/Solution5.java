@@ -1,5 +1,8 @@
 package leetCode.Arrays;
 
+import java.util.ArrayList;
+import java.util.List;
+
 class Solution{
     public static int search(int[] nums, int target) {
         if (nums.length == 0) return -1;
@@ -15,6 +18,35 @@ class Solution{
                 res = mid;
                 break;
             }
+        }
+        return res;
+    }
+
+    /**
+     * 234 回文链表
+     * @param head
+     * @return
+     */
+    public boolean isPalindrome(ListNode head) {
+        if (head == null){
+            return  false;
+        }
+        boolean res = true;
+        ListNode pre = head;
+        List<Integer> list = new ArrayList<>();
+        while (pre != null){
+            list.add(pre.val);
+            pre = pre.next;
+        }
+        int low = 0,high = list.size()-1;
+        while (low < high){
+           if( list.get(low).intValue() != list.get(high).intValue()){
+               res = false;
+               break;
+           } else {
+               low ++;
+               high --;
+           }
         }
         return res;
     }
