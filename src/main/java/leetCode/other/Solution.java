@@ -192,10 +192,54 @@ public class Solution {
         return res;
     }
 
+    /**
+     * 异或法求出现奇数次的元素
+     * @param nums
+     * @return
+     */
+    int method(int[] nums){
+        int res = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            res ^= nums[i];
+        }
+        return res;
+    }
+
+
+
+   static String huiwen1(String str){
+        String res = "";
+        for (int i = 0; i < str.length(); i++) {
+            String sub = str.substring(0,str.length()-i);
+            if (huiwen(sub)){
+                res =  sub;
+                break;
+            }
+        }
+        return res;
+    }
+     static boolean huiwen(String str){
+        if (str.isEmpty() ){
+            return true;
+        }
+
+        boolean res = true;
+        int low = 0, high = str.length()-1;
+        while (low < high){
+            if (str.charAt(low) != str.charAt(high)){
+                res = false;
+                break;
+            }
+            low ++;
+            high --;
+        }
+        return res;
+    }
+
 
     public static void main(String[] args) {
-        boolean power = isPowerOfThree(59049);
-        System.out.println(power);
+        String s = huiwen1("abcdefggfedcba");
+        System.out.println(s);
 
     }
 
