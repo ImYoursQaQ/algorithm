@@ -98,5 +98,34 @@ public class Solution3 {
     return list;
     }
 
+    static boolean res = true;
+    public static boolean isBalanced(TreeNode root) {
+        if (root == null){
+            return true;
+        }
+        dfs(root);
+        return res;
+    }
+
+    private static int dfs(TreeNode root) {
+        if (root == null){
+            return 0;
+        }
+        int left = dfs(root.left) + 1;
+        int right = dfs(root.right) +1;
+        if (Math.abs(left-right) >1){
+            res = false;
+        }
+        return Math.max(left,right);
+
+
+    }
+
+    public static void main(String[] args) {
+        boolean balanced = isBalanced(null);
+        System.out.println(balanced);
+
+    }
+
 
 }
