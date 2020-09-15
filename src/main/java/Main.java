@@ -17,10 +17,10 @@ public class Main {
         map.put("key","value");
         System.out.println("Hello World!");
         List list = new ArrayList();
-        for(int i=0;i<10000;i++){
-            String str = new String("12348888");
-            list.add(str);
-        }
+//        for(int i=0;i<10000;i++){
+//            String str = new String("12348888");
+//            list.add(str);
+//        }
         System.out.println("最大堆："+Runtime.getRuntime().maxMemory()/1024/1024+"M");
         System.out.println("空闲堆："+Runtime.getRuntime().freeMemory()/1024/1024+"M");
         System.out.println("总的堆："+Runtime.getRuntime().totalMemory()/1024/1024+"M");
