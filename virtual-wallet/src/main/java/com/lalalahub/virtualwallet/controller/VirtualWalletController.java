@@ -1,6 +1,6 @@
-package com.lalalahubo.virtualWallet.controller;
+package com.lalalahub.virtualwallet.controller;
 
-import com.lalalahubo.virtualWallet.service.VirtualWalletService;
+import com.lalalahub.virtualwallet.service.VirtualWalletService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;

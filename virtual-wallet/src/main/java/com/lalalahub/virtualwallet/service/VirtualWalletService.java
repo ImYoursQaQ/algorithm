@@ -1,11 +1,11 @@
-package com.lalalahubo.virtualWallet.service;
+package com.lalalahub.virtualwallet.service;
 
-import com.lalalahubo.virtualWallet.dao.VirtualWalletRepository;
-import com.lalalahubo.virtualWallet.dao.VirtualWalletTransactionRepository;
-import com.lalalahubo.virtualWallet.dao.entity.VirtualWalletEntity;
-import com.lalalahubo.virtualWallet.dao.entity.VirtualWalletTransactionEntity;
-import com.lalalahubo.virtualWallet.common.TransactionType;
-import com.lalalahubo.virtualWallet.domain.VirtualWallet;
+import com.lalalahub.virtualwallet.common.TransactionType;
+import com.lalalahub.virtualwallet.dao.entity.VirtualWalletEntity;
+import com.lalalahub.virtualwallet.dao.entity.VirtualWalletTransactionEntity;
+import com.lalalahub.virtualwallet.domain.VirtualWallet;
+import com.lalalahub.virtualwallet.dao.VirtualWalletRepository;
+import com.lalalahub.virtualwallet.dao.VirtualWalletTransactionRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,6 +1,6 @@
-package com.lalalahubo.virtualWallet.dao.entity;
+package com.lalalahub.virtualwallet.dao.entity;
 
-import com.lalalahubo.virtualWallet.common.TransactionType;
+import com.lalalahub.virtualwallet.common.TransactionType;
 
 import java.math.BigDecimal;
 

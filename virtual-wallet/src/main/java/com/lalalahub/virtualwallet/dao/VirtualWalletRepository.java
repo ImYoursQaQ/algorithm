@@ -1,6 +1,6 @@
-package com.lalalahubo.virtualWallet.dao;
+package com.lalalahub.virtualwallet.dao;
 
-import com.lalalahubo.virtualWallet.dao.entity.VirtualWalletEntity;
+import com.lalalahub.virtualwallet.dao.entity.VirtualWalletEntity;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;

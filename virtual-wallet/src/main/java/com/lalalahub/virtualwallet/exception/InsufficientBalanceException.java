@@ -1,9 +1,10 @@
-package com.lalalahubo.virtualWallet.exception;
+package com.lalalahub.virtualwallet.exception;
 
 /**
  * @author teohubo
  */
-public class InvalidAmountException extends RuntimeException {
+public class InsufficientBalanceException extends RuntimeException{
+
     /**
      * Constructs a new runtime exception with the specified detail message.
      * The cause is not initialized, and may subsequently be initialized by a
@@ -12,7 +13,7 @@ public class InvalidAmountException extends RuntimeException {
      * @param message the detail message. The detail message is saved for
      *                later retrieval by the {@link #getMessage()} method.
      */
-    public InvalidAmountException(String message) {
+    public InsufficientBalanceException(String message) {
         super(message);
     }
 }

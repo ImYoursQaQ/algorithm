@@ -1,7 +1,7 @@
-package com.lalalahubo.virtualWallet.domain;
+package com.lalalahub.virtualwallet.domain;
 
-import com.lalalahubo.virtualWallet.exception.InsufficientBalanceException;
-import com.lalalahubo.virtualWallet.exception.InvalidAmountException;
+import com.lalalahub.virtualwallet.exception.InsufficientBalanceException;
+import com.lalalahub.virtualwallet.exception.InvalidAmountException;
 
 import java.math.BigDecimal;
 

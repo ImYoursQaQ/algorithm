@@ -1,4 +1,4 @@
-package com.lalalahubo.virtualWallet.common;
+package com.lalalahub.virtualwallet.common;
 
 /**
  * @author teohubo

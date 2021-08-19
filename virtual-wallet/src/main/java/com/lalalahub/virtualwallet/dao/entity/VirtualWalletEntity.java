@@ -1,4 +1,4 @@
-package com.lalalahubo.virtualWallet.dao.entity;
+package com.lalalahub.virtualwallet.dao.entity;
 
 /**
  * @author teohubo

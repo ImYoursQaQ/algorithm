@@ -1,6 +1,6 @@
-package com.lalalahubo.virtualWallet.dao;
+package com.lalalahub.virtualwallet.dao;
 
-import com.lalalahubo.virtualWallet.dao.entity.VirtualWalletTransactionEntity;
+import com.lalalahub.virtualwallet.dao.entity.VirtualWalletTransactionEntity;
 import org.springframework.stereotype.Repository;
 
 /**

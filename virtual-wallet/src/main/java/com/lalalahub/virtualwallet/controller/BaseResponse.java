@@ -1,4 +1,4 @@
-package com.lalalahubo.virtualWallet.controller;
+package com.lalalahub.virtualwallet.controller;
 
 import lombok.Getter;
 
