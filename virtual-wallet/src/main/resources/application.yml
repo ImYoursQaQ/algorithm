@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    username: root
+    password: 71Password@
+    url: jdbc:mysql://10.96.76.71:3306/db_ev
