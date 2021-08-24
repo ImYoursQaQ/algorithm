@@ -29,7 +29,9 @@ public class DefaultApiAuthencator implements ApiAuthencator {
         if (clientAuthToken.isExpired(current)) {
             throw new RuntimeException("Token is expired!!!");
         }
-        AuthToken serverAuthToken = AuthToken.createToken(apiRequest);
+        String appID = apiRequest.getAppID();
+        String credential = storage.getCredential(appID);
+        AuthToken serverAuthToken = AuthToken.generate(apiRequest, appID, credential, timeStamp);
         if (!serverAuthToken.match(clientAuthToken)) {
             throw new RuntimeException("Token verfication failed!!!");
         }

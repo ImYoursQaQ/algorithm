@@ -30,23 +30,21 @@ public class AuthToken {
         this.expiredTimeInterval = expiredTimeInterval;
     }
 
+    public static AuthToken generate(ApiRequest apiRequest, String appId, String credential, long timeStamp) {
+        Map<String, Object> params = apiRequest.parseParams();
+        params.put("appId",appId);
+        params.put("creatTime",timeStamp);
+        params.put("credential",credential);
+        String token = generateToken(params);
+        return new AuthToken(token,timeStamp);
+    }
+
     public boolean isExpired(Date current){
         return current.getTime() - this.createTime > this.expiredTimeInterval;
     }
 
     public boolean match(AuthToken token){
         return Objects.equals(this.token,token.getToken());
-    }
-
-    public static AuthToken createToken(ApiRequest request){
-        long timeStamp = request.getTimeStamp();
-        CredentialStorage mysqlCredentialStorage = new MysqlCredentialStorage();
-        String credential = mysqlCredentialStorage.getCredential(request.getAppID());
-        Map<String, Object> params = request.parseParams();
-        params.put("creatTime",timeStamp);
-        params.put("credential",credential);
-        String token = generateToken(params);
-        return new AuthToken(token,timeStamp);
     }
 
     private static String generateToken(final Map<String, Object> params) {
