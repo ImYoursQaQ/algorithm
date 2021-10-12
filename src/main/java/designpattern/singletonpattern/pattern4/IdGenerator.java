@@ -15,7 +15,7 @@ public class IdGenerator {
     }
 
     public static IdGenerator getInstance(){
-        return inner.idGenerator;
+        return Inner.idGenerator;
     }
 
 
@@ -23,7 +23,7 @@ public class IdGenerator {
         return id.incrementAndGet();
     }
 
-    private static class inner{
+    private static class Inner {
         private static final IdGenerator idGenerator = new IdGenerator();
     }
 }
