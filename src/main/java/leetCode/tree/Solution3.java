@@ -1,6 +1,9 @@
 package leetCode.tree;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Stack;
 
 /**
  * @author hubo
@@ -19,7 +22,7 @@ public class Solution3 {
     private void doDFS(TreeNode root, List<List<Integer>> res, int level) {
         if (root == null) return;
         if (res.size() < level){
-            res.add(new ArrayList<>());
+            res.add(Collections.<Integer>emptyList());
         }
         res.get(level-1).get(root.val);
         doDFS(root.left,res,level+1);

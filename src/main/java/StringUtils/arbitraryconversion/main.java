@@ -7,7 +7,7 @@ package StringUtils.arbitraryconversion;
 
 public class main {
     public static void main(String[] args) {
-        String a= "1110";//2进制
+        String a= "1110";//2进制的 14
         String b = convert(a,2,16);
         System.out.println(b);
     }
