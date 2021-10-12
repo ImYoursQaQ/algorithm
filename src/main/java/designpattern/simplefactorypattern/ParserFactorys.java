@@ -1,4 +1,4 @@
-package designpattern.simplefactorypattern.factory;
+package designpattern.simplefactorypattern;
 
 import designpattern.simplefactorypattern.parser.JsonParser;
 import designpattern.simplefactorypattern.parser.Parser;

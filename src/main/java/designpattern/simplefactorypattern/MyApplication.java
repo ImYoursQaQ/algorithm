@@ -1,7 +1,6 @@
 package designpattern.simplefactorypattern;
 
 
-import designpattern.simplefactorypattern.factory.ParserFactorys;
 import designpattern.simplefactorypattern.parser.Parser;
 
 /**
