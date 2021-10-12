@@ -9,8 +9,7 @@ import designpattern.simplefactorypattern.parser.Parser;
 public class MyApplication {
 
     public static void main(String[] args) {
-        ParserFactorys parserFactorys = new ParserFactorys();
-        Parser parser = parserFactorys.getParser("key");
+        Parser parser = ParserFactorys.getParser("key");
         parser.parse("text");
     }
 }

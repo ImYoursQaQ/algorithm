@@ -13,10 +13,10 @@ import java.util.Map;
  */
 public class ParserFactorys {
 
-    Map<String, ParserFactory> factoryMap;
+    private static Map<String, ParserFactory> factoryMap;
 
 
-    public ParserFactorys() {
+    static  {
         HashMap<String, ParserFactory> map = new HashMap<>();
         map.put("json",new JsonParserFactory());
         map.put("xml",new XmlParserFactory());
@@ -24,7 +24,7 @@ public class ParserFactorys {
         factoryMap = map;
     }
 
-    public ParserFactory getFactory(String key){
+    public static ParserFactory getFactory(String key){
         return factoryMap.get(key);
     }
 }

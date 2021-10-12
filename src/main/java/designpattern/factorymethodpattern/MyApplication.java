@@ -8,8 +8,7 @@ import designpattern.factorymethodpattern.parser.Parser;
 public class MyApplication {
 
     public static void main(String[] args) {
-        ParserFactorys parserFactorys = new ParserFactorys();
-        Parser parser = parserFactorys.getFactory("json").getParser();
+        Parser parser = ParserFactorys.getFactory("json").getParser();
         parser.parse("text");
     }
 }

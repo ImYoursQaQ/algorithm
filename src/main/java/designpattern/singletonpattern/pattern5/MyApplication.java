@@ -14,9 +14,7 @@ public class MyApplication {
         IdGenerator instance = IdGenerator.INSTANCE;
         ExecutorService executorService = Executors.newFixedThreadPool(10);
         for (int i = 0; i < 100; i++) {
-            executorService.submit(()->{
-                System.out.println(instance.getId());
-            });
+            executorService.submit(()-> System.out.println(instance.getId()));
         }
         try {
             executorService.shutdown();
