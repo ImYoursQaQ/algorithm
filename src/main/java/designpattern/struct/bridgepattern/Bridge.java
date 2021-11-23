@@ -5,9 +5,25 @@ package designpattern.struct.bridgepattern;
  */
 public class Bridge {
     public static void main(String[] args) {
-        Iphone iphone = new Iphone();
-        Brand apple = new Brand("APPLE");
-        iphone.setBrand(apple);
+        Mac mac = new Mac();
+        Epson epson = new Epson();
+        Win win = new Win();
+        Hp hp = new Hp();
+        //mac  使用 epson 打印；
+        mac.setPrinter(epson);
+        mac.print();
+
+        //mac  使用 Hp 打印
+        mac.setPrinter(hp);
+        mac.print();
+
+        //win  使用 epson 打印；
+        win.setPrinter(epson);
+        win.print();
+
+        //win  使用 Hp 打印
+        win.setPrinter(hp);
+        win.print();
     }
 }
 
@@ -20,29 +36,62 @@ public class Bridge {
  * 一个类存在不同纬度的变化，可以通过组合的方式，让它们独自扩展。
  * 栗子：白色圆形，白色正方形，黑色圆形，黑色正方形。 抽象成 颜色 跟 形状 两个纬度去搞，就是桥接模式啦。
  */
-abstract class AbstractPhone{
+interface Printer{
 
-    protected Brand brand;
-
-    public void setBrand(Brand brand) {
-        this.brand = brand;
-    }
+    void printFile();
 }
 
-class Brand{
+interface Computer{
 
-    private String name;
-
-    public Brand(String name) {
-        this.name = name;
-    }
+     void print();
+     void setPrinter(Printer printer);
 }
 
-class Iphone extends AbstractPhone{
-
+class Epson implements Printer{
 
     @Override
-    public void setBrand(Brand brand) {
-        super.setBrand(brand);
+    public void printFile() {
+        System.out.println("Epson.printFile");
     }
 }
+
+class Hp implements Printer{
+
+    @Override
+    public void printFile() {
+        System.out.println("Hp.printFile");
+    }
+}
+
+class Win implements Computer{
+
+    private Printer printer;
+
+    @Override
+    public void print() {
+        System.out.println("win.print");
+        this.printer.printFile();
+    }
+
+    @Override
+    public void setPrinter(Printer printer) {
+        this.printer = printer;
+    }
+}
+
+class Mac implements Computer{
+
+    private Printer printer;
+
+    @Override
+    public void print() {
+        System.out.println("mac.print");
+        this.printer.printFile();
+    }
+
+    @Override
+    public void setPrinter(Printer printer) {
+        this.printer = printer;
+    }
+}
+
