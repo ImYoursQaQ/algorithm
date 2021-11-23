@@ -19,7 +19,7 @@ public class MyDynamicProxy {
         Hello proxyHello = (Hello) Proxy.newProxyInstance(HelloImpl.class.getClassLoader(), HelloImpl.class.getInterfaces(), handler);
         // 调用代理方法
         proxyHello.sayHello();
-        //proxyHello.sayHi();
+        proxyHello.sayHi();
     }
 }
 interface Hello {
