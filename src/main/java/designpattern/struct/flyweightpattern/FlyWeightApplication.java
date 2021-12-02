@@ -9,6 +9,11 @@ import java.util.Map;
 
 /**
  * @author teohubo
+ *
+ * 使用场景：
+ * 当一个系统中存在大量重复对象的时候，如果这些重复的对象是不可变对象，我们就可以利用享元模式将对象设计成享元，在内存中只保留一份实例，供多处代码引用。
+ * 这样可以减少内存中对象的数量，起到节省内存的目的。
+ * 实际上，不仅仅相同对象可以设计成享元，对于相似对象，我们也可以将这些对象中相同的部分（字段）提取出来，设计成享元，让这些大量相似对象引用这些享元。
  */
 public class FlyWeightApplication {
 
@@ -16,7 +21,6 @@ public class FlyWeightApplication {
 
         Game game = new Game();
 
-        DressFactory dressFactory = new DressFactory();
         Player t1 = new Player("T",0,0 );
         Player t2 = new Player("T",1,1 );
 
