@@ -1,8 +1,8 @@
-package designpattern.behavioral.templatepattern;
+package designpattern.behavioral.templatepattern.pattern1;
 
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.collect.Lists;
-import lombok.Data;
+import designpattern.behavioral.templatepattern.Order;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -25,25 +25,7 @@ public class TemplateApp {
     }
 }
 
-@Data
-class Order{
 
-    private Integer id;
-
-    private Integer type;
-
-    private String batchNo;
-
-    private String houseNo;
-
-    private Integer status;
-
-    public Order(Integer id, Integer type, Integer status) {
-        this.id = id;
-        this.type = type;
-        this.status = status;
-    }
-}
 
 abstract class OrderHandler{
 
