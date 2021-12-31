@@ -10,8 +10,6 @@ package leetCode.tree;
  * }
  */
 
-import java.util.List;
-
 /**
  * 98. 验证二叉搜索树
  */
@@ -53,10 +51,4 @@ class Solution {
         node11.left = node6; node11.right = node12;
         System.out.println(isValidBST(node10));
     }
-}
- class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-    TreeNode(int x) { val = x; }
 }
