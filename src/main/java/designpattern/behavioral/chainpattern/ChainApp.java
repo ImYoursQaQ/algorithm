@@ -15,8 +15,8 @@ public class ChainApp {
         FilterChain filterChain = new FilterChain();
         filterChain.addFilter(new StatusFilter()).addFilter(new TypeFilter());
         Order o1 = new Order(1, 1, 1);
-        Order o2 = new Order(2,2,2);
-        Order o3  = new Order(3,1,-1);
+        Order o2 = new Order(2, 2, 2);
+        Order o3 = new Order(3, 1, -1);
         Order o4 = new Order(4, 3, 1);
         ArrayList<Order> orders = Lists.newArrayList(o1, o2, o3, o4);
         filterChain.filterOrders(orders);
