@@ -11,6 +11,7 @@ public class Solution283 {
 
     /**
      * 交换排序的应用
+     * 使用双指针法可以快速实现
      * @param nums
      */
     public void moveZeroes(int[] nums) {
