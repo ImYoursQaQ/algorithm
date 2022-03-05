@@ -8,7 +8,8 @@ import java.util.Objects;
 class Solution242 {
 
     /**
-     * 使用map进行计数
+     * 使用map进行计数，
+     * 扩展：使用数组也可以计数
      * @param s
      * @param t
      * @return
