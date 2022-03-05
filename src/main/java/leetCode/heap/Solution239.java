@@ -24,7 +24,7 @@ class Solution239 {
             while (queue.size() < k) {
                 queue.add(nums[j++]);
             }
-            res[i] = queue.peek().intValue();
+            res[i] = queue.peek();
         }
 
         return res;
