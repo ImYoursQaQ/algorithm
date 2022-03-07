@@ -1,7 +1,5 @@
 package sort.quickSort;
 
-import java.util.Arrays;
-
 /*
  * 快速排序
  *
@@ -10,8 +8,8 @@ public class main {
     public static void main(String[] args) {
         int[] a = {7, 8, 6, 4, 9, 5, 2, 3, 1};
         int start = 0,end = a.length-1;
-        Arrays.sort(a);//Arrays工具类内置排序
-        //quickSort(a,start,end);
+        //Arrays.sort(a);//Arrays工具类内置排序
+        quickSort(a,start,end);
         printresult(a);
 
     }
@@ -38,19 +36,22 @@ public class main {
     }
 
     static int partion(int[] a, int low, int high){
-        int temp = a[low];//将当前表中第一个元素作为枢轴元素
-        while (low<high){ //循环跳出条件，一趟排序完成
-            while (low<high&&a[high]>=temp){
-                high--;
+        //将当前表中第一个元素作为枢轴元素
+        int tmp = a[low];
+        while (low < high){
+            //从右端找出比枢轴元素小的
+            while (low < high && a[high] >= tmp){
+                high --;
             }
-            a[low] = a[high];//从右端找出比枢轴元素小的
-            while (low<high&&a[low]<=temp){
-                low++;
+            a[low] = a[high];
+            //从左端找出比枢轴元素大的
+            while (low < high && a[low] <= tmp){
+                low ++;
             }
-            a[high]= a[low];//从左端找出比枢轴元素大的
-
+            a[high] = a[low];
         }
-        a[low] = temp;//将枢轴元素放在最终位置上
+        //将枢轴元素放在最终位置上
+        a[low] = tmp;
         return low;
     }
 }
