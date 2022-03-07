@@ -17,13 +17,12 @@ public class main {
     }
 
     static void quickSort(int[] a,int low,int high) {
-       if (low<high){//递归进入的条件
-           int k = parttion(a,low,high);
-           quickSort(a,low,k-1);
-           quickSort(a,k+1,high);
-       }
-
-
+        if (low >= high) {
+            return;
+        }
+        int k = partion(a, low, high);
+        quickSort(a, low, k - 1);
+        quickSort(a, k + 1, high);
     }
 
     static void printresult(int[] a) {
@@ -38,7 +37,7 @@ public class main {
         a[j] = temp;
     }
 
-    static int parttion(int[] a,int low,int high){
+    static int partion(int[] a, int low, int high){
         int temp = a[low];//将当前表中第一个元素作为枢轴元素
         while (low<high){ //循环跳出条件，一趟排序完成
             while (low<high&&a[high]>=temp){

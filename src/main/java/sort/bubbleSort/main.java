@@ -13,7 +13,7 @@ public class main {
     }
 
     static void sort(int[] a) {
-        int i, j, temp;
+        int i, j;
         boolean flag = false;
         for (i = a.length - 1; i > 0; i--) {
             for (j = 0; j < i; j++) {
@@ -22,7 +22,7 @@ public class main {
                     flag = true;
                 }
             }
-            if (flag == false) {
+            if (!flag) {
                 break;
             }
         }
