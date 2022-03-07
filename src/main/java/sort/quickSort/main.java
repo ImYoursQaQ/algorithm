@@ -1,6 +1,6 @@
 package sort.quickSort;
 
-/*
+/**
  * 快速排序
  *
  * */
@@ -18,7 +18,7 @@ public class main {
         if (low >= high) {
             return;
         }
-        int k = partion(a, low, high);
+        int k = partition(a, low, high);
         quickSort(a, low, k - 1);
         quickSort(a, k + 1, high);
     }
@@ -35,7 +35,7 @@ public class main {
         a[j] = temp;
     }
 
-    static int partion(int[] a, int low, int high){
+    static int partition(int[] a, int low, int high){
         //将当前表中第一个元素作为枢轴元素
         int tmp = a[low];
         while (low < high){
