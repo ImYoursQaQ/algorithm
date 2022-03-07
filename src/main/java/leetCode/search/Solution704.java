@@ -1,4 +1,4 @@
-package leetCode.find;
+package leetCode.search;
 
 /**
  * 704 二分查找
