@@ -1,5 +1,5 @@
 package sort.insertSort;
-/*
+/**
 * 直接插入排序
 *
 * */
@@ -10,16 +10,23 @@ public class main {
         printresult(a);
 
     }
-    static void sort(int[] a){
-        int i,j,temp ;
-        for (i = 1; i < a.length; i++) {
+    static void sort(int[] a) {
 
-                temp = a[i];
-
-            for (j = i; j >0 && temp<a[j-1] ; j--) {
-                a[j] = a[j-1];
+        for (int i = 1; i < a.length; i++) {
+            //记录当前位置元素
+            int tmp = a[i];
+            int j = i - 1;
+            //查找插入位置
+            for (; j >= 0; j--) {
+                if (a[j] > tmp) {
+                    //向后挪动一位
+                    a[j + 1] = a[j];
+                } else {
+                    break;
+                }
             }
-            a[j] = temp;
+            //把当前元素插入位置
+            a[j + 1] = tmp;
         }
 
     }
