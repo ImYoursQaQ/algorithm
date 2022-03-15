@@ -7,7 +7,7 @@ public class main {
     public static void main(String[] args) {
         int[] a = {7,8,6,4,9,5,2,3,1};
         sort(a);
-        printresult(a);
+        printResult(a);
 
     }
     static void sort(int[] a) {
@@ -28,10 +28,9 @@ public class main {
             //把当前元素插入位置
             a[j + 1] = tmp;
         }
-
     }
 
-    static void printresult(int[] a){
+    static void printResult(int[] a){
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i]+" ");
         }
