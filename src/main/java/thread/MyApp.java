@@ -15,8 +15,9 @@ public class MyApp {
     private static final int MAX_SYC_VALUE = Integer.MAX_VALUE;
 
     private class RunnableA implements Runnable {
+        @Override
         public void run() {
-            while (ai.get() < MAX_SYC_VALUE-1) {
+            while (ai.get() < MAX_SYC_VALUE) {
                 if (ai.get() % 3 == 0) {
                     System.out.print("A");
                     ai.getAndIncrement();
@@ -27,6 +28,7 @@ public class MyApp {
     }
 
     private class RunnableB implements Runnable {
+        @Override
         public void run() {
             while (ai.get() < MAX_SYC_VALUE) {
                 if (ai.get() % 3 == 1) {
@@ -39,6 +41,7 @@ public class MyApp {
     }
 
     private class RunnableC implements Runnable {
+        @Override
         public void run() {
             while (ai.get() < MAX_SYC_VALUE) {
                 if (ai.get() % 3 == 2) {
