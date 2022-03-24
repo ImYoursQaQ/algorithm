@@ -14,8 +14,10 @@ public class main {
 
     static void sort(int[] a) {
         int i, j;
-        boolean flag = false;
+        //外层循环代表：当前冒泡出得最大位置
         for (i = a.length - 1; i > 0; i--) {
+            boolean flag = false;
+            //内层循坏到待排序末尾
             for (j = 0; j < i; j++) {
                 if (a[j] > a[j + 1]) {
                     swap(a, j, j + 1);
@@ -26,7 +28,6 @@ public class main {
                 break;
             }
         }
-
     }
 
     static void printresult(int[] a) {

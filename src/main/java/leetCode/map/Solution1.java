@@ -21,7 +21,7 @@ class Solution1 {
         for (int i = 0; i < nums.length; i++) {
             int a = nums[i];
             int b = target - a;
-            if (map.containsKey(b)) {
+            if (map.containsKey(b) && i != map.get(b)) {
                 return new int[]{i, map.get(b)};
             }
         }

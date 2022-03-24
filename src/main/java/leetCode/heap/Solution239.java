@@ -15,15 +15,19 @@ class Solution239 {
      */
     public int[] maxSlidingWindow(int[] nums, int k) {
         int[] res = new int[nums.length + 1 - k];
+        //大顶堆初始化
         Queue<Integer> queue = new PriorityQueue<>(Comparator.reverseOrder());
         int j = 0;
-        for (int i = 0; i < res.length; i++) {
+        for (int i = 0; i < res.length + 1 -k ; i++) {
             if (queue.size() == k) {
+                //队列满，移除窗口左边元素
                 queue.remove(nums[i - 1]);
             }
             while (queue.size() < k) {
+                //添加k 个新元素
                 queue.add(nums[j++]);
             }
+            //自动弹出当前最大元素
             res[i] = queue.peek();
         }
 
