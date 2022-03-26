@@ -11,10 +11,11 @@ class LRUCache {
     public LRUCache(int capacity) {
         this.capacity = capacity;
         deque = new LinkedList<>();
-        map = new HashMap();
+        map = new HashMap<>();
     }
     
     public int get(int key) {
+        //如果缓存命中，将原来位置删除，并添加到最新位置
         if (deque.contains(key)){
             boolean remove = deque.remove(Integer.valueOf(key));
             deque.addLast(key);
@@ -24,16 +25,19 @@ class LRUCache {
     }
     
     public void put(int key, int value) {
+        //如果已经有了此元素，同get操作
         if (deque.contains(key)){
-            boolean remove = deque.remove(Integer.valueOf(key));
+            deque.remove(Integer.valueOf(key));
             deque.addLast(key);
             map.put(key,value);
             return;
         }
+        //如果缓存满了，则删除队列首部元素
         if (deque.size() == capacity){
             map.remove(deque.removeFirst());
         }
-        deque.add(key);
+        //添加元素
+        deque.addLast(key);
         map.put(key,value);
     }
 
