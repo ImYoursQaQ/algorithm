@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -39,14 +40,7 @@ public class Main {
             }
 
         }
-
-        List<List<String>> res = new ArrayList<>();
-        for (List<String> value : resMap.values()) {
-            if (value.size() > 1){
-                res.add(value);
-            }
-        }
-        return res;
+        return resMap.values().stream().filter(list -> list.size() > 1).collect(Collectors.toList());
     }
 
 
@@ -55,6 +49,6 @@ public class Main {
     public static void main(String[] args) {
         String[] path = {"root/a 1.txt(abcd) 2.txt(efgh)","root/c 3.txt(abcd)","root/c/d 4.txt(efgh)","root 4.txt(efgh)"};
         Main main = new Main();
-        main.findDuplicate(path);
+        System.out.println(main.findDuplicate(path));
     }
 }
